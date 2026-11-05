@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="English VClass — Aula • Negative Forms in English">
+<title>English VClass • Aula • Negative Forms in English</title>
+<style>
+:root{
+  --primary:#123c69;
+  --secondary:#1f7a8c;
+  --accent:#f4b942;
+  --light:#f4f7fb;
+  --dark:#17202a;
+  --muted:#667085;
+  --green:#16803c;
+  --green-bg:#eaf7ee;
+  --red:#c62828;
+  --red-bg:#fdecec;
+  --white:#fff;
+  --shadow:0 8px 24px rgba(18,60,105,.10);
+  --radius:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--light);
+  color:var(--dark);
+  line-height:1.6;
+}
+header{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:white;
+  padding:28px 16px 34px;
+}
+.header-inner{max-width:980px;margin:auto}
+.brand{font-weight:800;letter-spacing:.5px;font-size:1.05rem}
+header h1{font-size:clamp(1.8rem,5vw,3rem);line-height:1.15;margin:12px 0 8px}
+header p{margin:0;opacity:.95;font-size:1rem}
+.progress-wrap{margin-top:22px;background:rgba(255,255,255,.2);border-radius:99px;height:10px;overflow:hidden}
+.progress{width:10%;height:100%;background:var(--accent);border-radius:99px;transition:width .5s ease}
+nav{
+  position:sticky;top:0;z-index:20;
+  background:white;border-bottom:1px solid #e5e7eb;
+  overflow-x:auto;white-space:nowrap;
+}
+nav .nav-inner{max-width:980px;margin:auto;display:flex}
+nav a{
+  display:inline-block;padding:12px 14px;color:var(--primary);
+  text-decoration:none;font-weight:700;font-size:.9rem;
+}
+nav a.done::after{content:" ✓";color:var(--green);font-weight:800}
+main{max-width:980px;margin:auto;padding:20px 14px 50px}
+.card{
+  background:white;border-radius:var(--radius);padding:22px;
+  margin:18px 0;box-shadow:var(--shadow);
+}
+.card h2{color:var(--primary);margin-top:0;font-size:1.45rem}
+.card h3{color:var(--secondary);margin-bottom:8px}
+.badge{
+  display:inline-block;background:#e8f2fb;color:var(--primary);
+  padding:5px 10px;border-radius:999px;font-size:.8rem;font-weight:800;
+}
+.goal-list{padding-left:20px}
+.goal-list li{margin:7px 0}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:420px}
+th,td{padding:12px;border-bottom:1px solid #e8ebef;text-align:left}
+th{background:#eef4fa;color:var(--primary)}
+.example{
+  background:#f8fafc;border-left:5px solid var(--secondary);
+  padding:13px 15px;margin:12px 0;border-radius:8px;
+}
+.example-audio{
+  display:flex;gap:6px;margin-top:8px;flex-wrap:wrap;
+}
+.audio-btn{
+  background:#eaf0f6;border:1px solid #d0d9e6;
+  border-radius:30px;padding:4px 12px;font-size:.75rem;
+  font-weight:700;color:var(--primary);cursor:pointer;
+  display:inline-flex;align-items:center;gap:4px;transition:.15s;
+}
+.audio-btn:hover{background:#d0d9e6}
+.audio-btn.playing{background:var(--secondary);color:white;border-color:var(--secondary)}
+.en{font-weight:700;color:var(--primary)}
+.pt{color:var(--muted)}
+.tip{
+  background:#fff8e7;border-left:5px solid var(--accent);
+  padding:14px;border-radius:8px;margin-top:14px;
+}
+.exercise{
+  border:1px solid #e3e8ef;border-radius:14px;padding:16px;margin:14px 0;
+}
+input[type="text"],textarea,select{
+  width:100%;padding:12px;border:1px solid #ccd5df;border-radius:10px;
+  font:inherit;background:white;
+}
+textarea{min-height:110px;resize:vertical}
+button{
+  border:0;border-radius:12px;padding:12px 17px;
+  background:var(--primary);color:white;font-weight:800;
+  cursor:pointer;font-size:1rem;
+}
+button:hover{filter:brightness(1.08)}
+button.secondary{background:var(--secondary)}
+button.light{background:#eaf0f6;color:var(--primary)}
+.feedback{
+  margin-top:10px;padding:11px;border-radius:10px;font-weight:700;display:none;
+}
+.feedback.correct{display:block;background:var(--green-bg);color:var(--green)}
+.feedback.wrong{display:block;background:var(--red-bg);color:var(--red)}
+.option{
+  display:block;width:100%;text-align:left;margin:8px 0;
+  background:#f5f7fa;color:var(--dark);border:1px solid #dce2e9;
+}
+.option.correct{background:var(--green-bg);border-color:#9ed7ae;color:var(--green)}
+.option.wrong{background:var(--red-bg);border-color:#efaaaa;color:var(--red)}
+.option:disabled{cursor:default;opacity:1}
+.score{
+  text-align:center;background:#eef4fa;border-radius:16px;padding:20px;
+  margin-top:20px;
+}
+.score strong{font-size:2.2rem;color:var(--primary)}
+.audio-box{
+  text-align:center;background:#f5f8fb;border-radius:15px;padding:20px;
+}
+#transcript{display:none;margin-top:15px}
+.speaking-card{
+  background:linear-gradient(135deg,#f5f8fb,#ffffff);
+  border:1px solid #e0e7ef;
+}
+footer{
+  text-align:center;margin-top:30px;padding:28px 15px;
+  color:#777;background:white;border-top:1px solid #e5e7eb;
+}
+footer .copyright{font-weight:700}
+.small{font-size:.88rem;color:var(--muted)}
+.hidden{display:none}
+
+/* Concept cards */
+.concept-card{
+  border:1px solid #e3e8ef;
+  border-radius:16px;
+  padding:18px;
+  margin:16px 0;
+  background:linear-gradient(135deg,#f8fafc,#ffffff);
+}
+.concept-header{
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:8px;margin-bottom:10px;
+}
+.concept-title{font-weight:800;color:var(--primary);font-size:1.05rem;}
+.concept-level{
+  background:#e8f2fb;color:var(--primary);
+  padding:3px 10px;border-radius:999px;
+  font-size:.72rem;font-weight:800;letter-spacing:.5px;
+}
+.concept-question{
+  font-weight:700;color:var(--dark);margin:8px 0;
+}
+.concept-answer{
+  background:#f0f9ff;border-left:4px solid var(--primary);
+  padding:12px 14px;border-radius:8px;margin:10px 0;
+  color:#0c4a6e;
+}
+.concept-pt{color:var(--muted);font-size:.92rem;margin:6px 0;}
+.concept-example{
+  background:#f8fafc;border-radius:8px;padding:10px 12px;
+  margin:8px 0;font-size:.92rem;
+}
+.concept-example strong{color:var(--primary);}
+.vocab-audio{
+  display:inline-flex;align-items:center;gap:4px;
+  background:#eaf0f6;border:1px solid #d0d9e6;
+  border-radius:20px;padding:3px 10px;margin:3px 4px 3px 0;
+  font-size:.78rem;font-weight:600;color:var(--primary);cursor:pointer;
+}
+.vocab-audio:hover{background:#d0d9e6;}
+
+@media(max-width:600px){
+  header{padding-top:23px}
+  .card{padding:18px;margin:14px 0}
+  nav a{padding:11px 12px;font-size:.82rem}
+  button{width:100%;margin-top:5px}
+  .audio-btn{width:auto;margin-top:0}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="brand">English VClass • Edson D'Aguiar</div>
+    <h1>Aula — Negative Forms in English</h1>
+    <p>do not · does not · did not · will not · cannot · never · no × not · nobody · neither…nor · hardly · Áudio US/UK</p>
+    <div class="progress-wrap" aria-label="Progresso da aula"><div class="progress" id="globalProgress"></div></div>
+    <p class="small" style="color:white;margin-top:8px"><span id="progressLabel">0</span>% concluído • English Foundations • Módulo Negation</p>
+  </div>
+</header>
+
+<nav aria-label="Navegação da aula">
+  <div class="nav-inner">
+    <a href="#objetivos" data-section="objetivos">Objetivos</a>
+    <a href="#present" data-section="present">Present</a>
+    <a href="#past" data-section="past">Past</a>
+    <a href="#future" data-section="future">Future & Ability</a>
+    <a href="#no-not" data-section="no-not">No × Not</a>
+    <a href="#negative-words" data-section="negative-words">Negative Words</a>
+    <a href="#advanced" data-section="advanced">Advanced</a>
+    <a href="#vocab" data-section="vocab">Vocabulary</a>
+    <a href="#exercises" data-section="exercises">Exercises</a>
+    <a href="#listening" data-section="listening">Listening</a>
+    <a href="#quiz" data-section="quiz">Quiz</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- ========== OBJETIVOS ========== -->
+<section class="card" id="objetivos">
+  <span class="badge">A1–B2 • NEGATION</span>
+  <h2>🎯 Objetivos da aula</h2>
+  <p>Esta aula integra o conteúdo dos flashcards sobre formas negativas (Negative Words A, B e Formas de Negação). Ao final, você deverá ser capaz de:</p>
+  <ul class="goal-list">
+    <li>Negar ações no <strong>presente</strong> (do not / don't · does not / doesn't).</li>
+    <li>Negar ações no <strong>passado</strong> (did not / didn't).</li>
+    <li>Negar ações no <strong>futuro</strong> (will not / won't).</li>
+    <li>Expressar <strong>incapacidade</strong> (cannot / can't).</li>
+    <li>Diferenciar <strong>no × not</strong> e usar <strong>never</strong> corretamente.</li>
+    <li>Usar palavras negativas: <strong>nobody, nothing, nowhere, none</strong>.</li>
+    <li>Usar <strong>neither…nor</strong> e <strong>hardly / barely</strong>.</li>
+    <li>Reconhecer verbos de significado negativo: <strong>deny, refuse, lack</strong>.</li>
+    <li>Formar perguntas negativas e usar <strong>question tags</strong>.</li>
+    <li>Melhorar a compreensão auditiva com áudios autênticos.</li>
+  </ul>
+</section>
+
+<!-- ========== PRESENT ========== -->
+<section class="card" id="present">
+  <h2>📘 1. Negation in the Present — do not / does not</h2>
+  <p>Para negar ações no presente simples, usamos <strong>do not (don't)</strong> ou <strong>does not (doesn't)</strong> + verbo na forma base.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Subject</th><th>Form</th><th>Example</th><th>Áudio</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>I / You / We / They</td>
+          <td><strong>do not (don't)</strong></td>
+          <td>I <strong>don't</strong> eat meat.</td>
+          <td><div class="example-audio">
+            <button class="audio-btn" data-phrase="I don't eat meat." data-accent="us">🇺🇸 US</button>
+            <button class="audio-btn" data-phrase="I don't eat meat." data-accent="uk">🇬🇧 UK</button>
+          </div></td>
+        </tr>
+        <tr>
+          <td>He / She / It</td>
+          <td><strong>does not (doesn't)</strong></td>
+          <td>She <strong>doesn't</strong> drive.</td>
+          <td><div class="example-audio">
+            <button class="audio-btn" data-phrase="She doesn't drive." data-accent="us">🇺🇸 US</button>
+            <button class="audio-btn" data-phrase="She doesn't drive." data-accent="uk">🇬🇧 UK</button>
+          </div></td>
+        </tr>
+        <tr>
+          <td>They</td>
+          <td><strong>do not (don't)</strong></td>
+          <td>They <strong>don't</strong> agree.</td>
+          <td><div class="example-audio">
+            <button class="audio-btn" data-phrase="They don't agree." data-accent="us">🇺🇸 US</button>
+            <button class="audio-btn" data-phrase="They don't agree." data-accent="uk">🇬🇧 UK</button>
+          </div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tip">
+    <strong>💡 Important:</strong> After don't / doesn't, use the <strong>base verb</strong> (no -s).<br>
+    ✅ She <strong>doesn't drive</strong>. ❌ She doesn't drives.
+  </div>
+
+  <div class="concept-card">
+    <div class="concept-header">
+      <span class="concept-title">1️⃣ Negating Present Actions</span>
+      <span class="concept-level">A1–A2</span>
+    </div>
+    <div class="concept-question">❓ How do we negate actions in the present?</div>
+    <div class="exercise" id="concept1-ex">
+      <button class="option" onclick="answerConcept(this, true, 'concept1-ex')">Use 'do not' (don't) or 'does not' (doesn't) + base verb.</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept1-ex')">Use 'not' alone before the verb.</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept1-ex')">Use 'no' before the verb.</button>
+      <div class="feedback"></div>
+    </div>
+    <div class="concept-answer">✅ Use <strong>do not (don't)</strong> or <strong>does not (doesn't)</strong>.</div>
+    <div class="concept-example">
+      <strong>Examples:</strong> I don't eat meat. / She doesn't drive.
+    </div>
+    <div class="example-audio">
+      <button class="audio-btn" data-phrase="I don't eat meat. She doesn't drive." data-accent="us">🇺🇸 US</button>
+      <button class="audio-btn" data-phrase="I don't eat meat. She doesn't drive." data-accent="uk">🇬🇧 UK</button>
+    </div>
+    <div class="rq-vocab" style="margin-top:12px;padding-top:10px;border-top:1px dashed #d0d9e6;font-size:.88rem;color:var(--muted);">
+      <strong style="color:var(--primary);">📚 Key Vocabulary:</strong>
+      <span class="vocab-audio" data-phrase="don't" data-accent="us">🔊 don't → não (contração)</span>
+      <span class="vocab-audio" data-phrase="doesn't" data-accent="us">🔊 doesn't → não (3ª pessoa)</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PAST ========== -->
+<section class="card" id="past">
+  <h2>📘 2. Negation in the Past — did not</h2>
+  <p>Para negar ações no passado simples, usamos <strong>did not (didn't)</strong> + verbo na forma base (não importa se o verbo é regular ou irregular).</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Subject</th><th>Form</th><th>Example</th><th>Áudio</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>All subjects</td>
+          <td><strong>did not (didn't)</strong></td>
+          <td>He <strong>didn't go</strong> to work yesterday.</td>
+          <td><div class="example-audio">
+            <button class="audio-btn" data-phrase="He didn't go to work yesterday." data-accent="us">🇺🇸 US</button>
+            <button class="audio-btn" data-phrase="He didn't go to work yesterday." data-accent="uk">🇬🇧 UK</button>
+          </div></td>
+        </tr>
+        <tr>
+          <td>All subjects</td>
+          <td><strong>did not (didn't)</strong></td>
+          <td>They <strong>didn't finish</strong> the project.</td>
+          <td><div class="example-audio">
+            <button class="audio-btn" data-phrase="They didn't finish the project." data-accent="us">🇺🇸 US</button>
+            <button class="audio-btn" data-phrase="They didn't finish the project." data-accent="uk">🇬🇧 UK</button>
+          </div></td>
+        </tr>
+        <tr>
+          <td>All subjects</td>
+          <td><strong>did not (didn't)</strong></td>
+          <td>I <strong>didn't see</strong> her at the party.</td>
+          <td><div class="example-audio">
+            <button class="audio-btn" data-phrase="I didn't see her at the party." data-accent="us">🇺🇸 US</button>
+            <button class="audio-btn" data-phrase="I didn't see her at the party." data-accent="uk">🇬🇧 UK</button>
+          </div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tip">
+    <strong>💡 Important:</strong> After didn't, use the <strong>base verb</strong> — never the past form.<br>
+    ✅ He <strong>didn't go</strong>. ❌ He didn't went.
+  </div>
+
+  <div class="concept-card">
+    <div class="concept-header">
+      <span class="concept-title">2️⃣ Negating Past Actions</span>
+      <span class="concept-level">A2</span>
+    </div>
+    <div class="concept-question">❓ How do we negate actions in the past?</div>
+    <div class="exercise" id="concept2-ex">
+      <button class="option" onclick="answerConcept(this, false, 'concept2-ex')">Use 'don't' + past verb.</button>
+      <button class="option" onclick="answerConcept(this, true, 'concept2-ex')">Use 'did not' (didn't) + base verb.</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept2-ex')">Use 'will not' + base verb.</button>
+      <div class="feedback"></div>
+    </div>
+    <div class="concept-answer">✅ Use <strong>did not (didn't)</strong> + base verb.</div>
+    <div class="concept-example">
+      <strong>Example:</strong> He didn't go to work yesterday.
+    </div>
+    <div class="example-audio">
+      <button class="audio-btn" data-phrase="He didn't go to work yesterday." data-accent="us">🇺🇸 US</button>
+      <button class="audio-btn" data-phrase="He didn't go to work yesterday." data-accent="uk">🇬🇧 UK</button>
+    </div>
+    <div class="rq-vocab" style="margin-top:12px;padding-top:10px;border-top:1px dashed #d0d9e6;font-size:.88rem;color:var(--muted);">
+      <strong style="color:var(--primary);">📚 Key Vocabulary:</strong>
+      <span class="vocab-audio" data-phrase="didn't" data-accent="us">🔊 didn't → não (passado)</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FUTURE & ABILITY ========== -->
+<section class="card" id="future">
+  <h2>📘 3. Negation in the Future — will not · cannot</h2>
+  <p>Para o futuro, usamos <strong>will not (won't)</strong> + verbo base. Para expressar incapacidade, usamos <strong>cannot (can't)</strong>.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Type</th><th>Form</th><th>Example</th><th>Áudio</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Future</strong></td>
+          <td>will not (won't) + base verb</td>
+          <td>They <strong>won't attend</strong> the meeting.</td>
+          <td><div class="example-audio">
+            <button class="audio-btn" data-phrase="They won't attend the meeting." data-accent="us">🇺🇸 US</button>
+            <button class="audio-btn" data-phrase="They won't attend the meeting." data-accent="uk">🇬🇧 UK</button>
+          </div></td>
+        </tr>
+        <tr>
+          <td><strong>Future</strong></td>
+          <td>will not (won't) + base verb</td>
+          <td>I <strong>won't forget</strong> your birthday.</td>
+          <td><div class="example-audio">
+            <button class="audio-btn" data-phrase="I won't forget your birthday." data-accent="us">🇺🇸 US</button>
+            <button class="audio-btn" data-phrase="I won't forget your birthday." data-accent="uk">🇬🇧 UK</button>
+          </div></td>
+        </tr>
+        <tr>
+          <td><strong>Ability</strong></td>
+          <td>cannot (can't) + base verb</td>
+          <td>She <strong>can't swim</strong>.</td>
+          <td><div class="example-audio">
+            <button class="audio-btn" data-phrase="She can't swim." data-accent="us">🇺🇸 US</button>
+            <button class="audio-btn" data-phrase="She can't swim." data-accent="uk">🇬🇧 UK</button>
+          </div></td>
+        </tr>
+        <tr>
+          <td><strong>Ability</strong></td>
+          <td>cannot (can't) + base verb</td>
+          <td>I <strong>cannot understand</strong> this.</td>
+          <td><div class="example-audio">
+            <button class="audio-btn" data-phrase="I cannot understand this." data-accent="us">🇺🇸 US</button>
+            <button class="audio-btn" data-phrase="I cannot understand this." data-accent="uk">🇬🇧 UK</button>
+          </div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tip">
+    <strong>💡 Attention:</strong> "Cannot" is written as <strong>one word</strong>; "can't" is the contraction. "Will not" contracts to "won't" (not "willn't").
+  </div>
+
+  <div class="concept-card">
+    <div class="concept-header">
+      <span class="concept-title">3️⃣ Negating Future Actions</span>
+      <span class="concept-level">A2</span>
+    </div>
+    <div class="concept-question">❓ How do we negate actions in the future?</div>
+    <div class="exercise" id="concept3-ex">
+      <button class="option" onclick="answerConcept(this, true, 'concept3-ex')">Use 'will not' (won't) + base verb.</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept3-ex')">Use 'don't' + base verb.</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept3-ex')">Use 'not' + verb.</button>
+      <div class="feedback"></div>
+    </div>
+    <div class="concept-answer">✅ Use <strong>will not (won't)</strong> + base verb.</div>
+    <div class="concept-example">
+      <strong>Example:</strong> They won't attend the meeting.
+    </div>
+    <div class="example-audio">
+      <button class="audio-btn" data-phrase="They won't attend the meeting." data-accent="us">🇺🇸 US</button>
+      <button class="audio-btn" data-phrase="They won't attend the meeting." data-accent="uk">🇬🇧 UK</button>
+    </div>
+    <div class="rq-vocab" style="margin-top:12px;padding-top:10px;border-top:1px dashed #d0d9e6;font-size:.88rem;color:var(--muted);">
+      <strong style="color:var(--primary);">📚 Key Vocabulary:</strong>
+      <span class="vocab-audio" data-phrase="won't" data-accent="us">🔊 won't → não (futuro)</span>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <div class="concept-header">
+      <span class="concept-title">4️⃣ Expressing Inability</span>
+      <span class="concept-level">A2</span>
+    </div>
+    <div class="concept-question">❓ How do we express inability?</div>
+    <div class="exercise" id="concept4-ex">
+      <button class="option" onclick="answerConcept(this, true, 'concept4-ex')">Use 'cannot' or 'can't'.</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept4-ex')">Use 'don't can'.</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept4-ex')">Use 'not can'.</button>
+      <div class="feedback"></div>
+    </div>
+    <div class="concept-answer">✅ Use <strong>cannot</strong> or <strong>can't</strong>.</div>
+    <div class="concept-example">
+      <strong>Example:</strong> She can't swim.
+    </div>
+    <div class="example-audio">
+      <button class="audio-btn" data-phrase="She can't swim." data-accent="us">🇺🇸 US</button>
+      <button class="audio-btn" data-phrase="She can't swim." data-accent="uk">🇬🇧 UK</button>
+    </div>
+    <div class="rq-vocab" style="margin-top:12px;padding-top:10px;border-top:1px dashed #d0d9e6;font-size:.88rem;color:var(--muted);">
+      <strong style="color:var(--primary);">📚 Key Vocabulary:</strong>
+      <span class="vocab-audio" data-phrase="can't" data-accent="us">🔊 can't → não poder</span>
+      <span class="vocab-audio" data-phrase="cannot" data-accent="us">🔊 cannot → não poder (formal)</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== NO x NOT ========== -->
+<section class="card" id="no-not">
+  <h2>📘 4. No × Not · Never</h2>
+  <p>A diferença entre <strong>no</strong> e <strong>not</strong> é fundamental: "no" vem antes de substantivo; "not" vem com verbo.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Word</th><th>Use</th><th>Example</th><th>Áudio</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>No</strong></td>
+          <td>Before a noun (zero quantity)</td>
+          <td><strong>No</strong> problem. / There are <strong>no</strong> people here.</td>
+          <td><div class="example-audio">
+            <button class="audio-btn" data-phrase="No problem. There are no people here." data-accent="us">🇺🇸 US</button>
+            <button class="audio-btn" data-phrase="No problem. There are no people here." data-accent="uk">🇬🇧 UK</button>
+          </div></td>
+        </tr>
+        <tr>
+          <td><strong>Not</strong></td>
+          <td>With verbs (negates the action/state)</td>
+          <td>I am <strong>not</strong> ready. / She is <strong>not</strong> coming.</td>
+          <td><div class="example-audio">
+            <button class="audio-btn" data-phrase="I am not ready. She is not coming." data-accent="us">🇺🇸 US</button>
+            <button class="audio-btn" data-phrase="I am not ready. She is not coming." data-accent="uk">🇬🇧 UK</button>
+          </div></td>
+        </tr>
+        <tr>
+          <td><strong>Never</strong></td>
+          <td>At no time; not ever</td>
+          <td>I have <strong>never</strong> visited Japan.</td>
+          <td><div class="example-audio">
+            <button class="audio-btn" data-phrase="I have never visited Japan." data-accent="us">🇺🇸 US</button>
+            <button class="audio-btn" data-phrase="I have never visited Japan." data-accent="uk">🇬🇧 UK</button>
+          </div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="concept-card">
+    <div class="concept-header">
+      <span class="concept-title">5️⃣ 'Never' — Meaning</span>
+      <span class="concept-level">A2–B1</span>
+    </div>
+    <div class="concept-question">❓ What does 'never' mean?</div>
+    <div class="exercise" id="concept5-ex">
+      <button class="option" onclick="answerConcept(this, true, 'concept5-ex')">'Never' means 'nunca' or 'at no time'.</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept5-ex')">'Never' means 'sempre'.</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept5-ex')">'Never' means 'às vezes'.</button>
+      <div class="feedback"></div>
+    </div>
+    <div class="concept-answer">✅ <strong>Never</strong> means "nunca" / "at no time".</div>
+    <div class="concept-example">
+      <strong>Example:</strong> I have never visited Japan.
+    </div>
+    <div class="example-audio">
+      <button class="audio-btn" data-phrase="I have never visited Japan." data-accent="us">🇺🇸 US</button>
+      <button class="audio-btn" data-phrase="I have never visited Japan." data-accent="uk">🇬🇧 UK</button>
+    </div>
+    <div class="rq-vocab" style="margin-top:12px;padding-top:10px;border-top:1px dashed #d0d9e6;font-size:.88rem;color:var(--muted);">
+      <strong style="color:var(--primary);">📚 Key Vocabulary:</strong>
+      <span class="vocab-audio" data-phrase="never" data-accent="us">🔊 never → nunca</span>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <div class="concept-header">
+      <span class="concept-title">6️⃣ 'No' vs 'Not'</span>
+      <span class="concept-level">A2</span>
+    </div>
+    <div class="concept-question">❓ What is the difference between 'no' and 'not'?</div>
+    <div class="exercise" id="concept6-ex">
+      <button class="option" onclick="answerConcept(this, true, 'concept6-ex')">'No' is used before a noun; 'not' is used with verbs.</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept6-ex')">They are exactly the same.</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept6-ex')">'No' is only used in questions.</button>
+      <div class="feedback"></div>
+    </div>
+    <div class="concept-answer">✅ <strong>No</strong> = before a noun (No problem). <strong>Not</strong> = with verbs (I am not ready).</div>
+    <div class="concept-example">
+      <strong>Examples:</strong> No problem. / I am not ready.
+    </div>
+    <div class="example-audio">
+      <button class="audio-btn" data-phrase="No problem. I am not ready." data-accent="us">🇺🇸 US</button>
+      <button class="audio-btn" data-phrase="No problem. I am not ready." data-accent="uk">🇬🇧 UK</button>
+    </div>
+    <div class="rq-vocab" style="margin-top:12px;padding-top:10px;border-top:1px dashed #d0d9e6;font-size:.88rem;color:var(--muted);">
+      <strong style="color:var(--primary);">📚 Key Vocabulary:</strong>
+      <span class="vocab-audio" data-phrase="no" data-accent="us">🔊 no → nenhum / zero</span>
+      <span class="vocab-audio" data-phrase="not" data-accent="us">🔊 not → não</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== NEGATIVE WORDS ========== -->
+<section class="card" id="negative-words">
+  <h2>📘 5. Negative Words — nobody, nothing, none</h2>
+  <p>Palavras negativas substituem sujeito ou objeto, eliminando a necessidade de "not".</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Word</th><th>Meaning</th><th>Example</th><th>Áudio</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Nobody / No one</strong></td>
+          <td>no person</td>
+          <td><strong>Nobody</strong> came to the event.</td>
+          <td><div class="example-audio">
+            <button class="audio-btn" data-phrase="Nobody came to the event." data-accent="us">🇺🇸 US</button>
+            <button class="audio-btn" data-phrase="Nobody came to the event." data-accent="uk">🇬🇧 UK</button>
+          </div></td>
+        </tr>
+        <tr>
+          <td><strong>Nothing</strong></td>
+          <td>no thing</td>
+          <td>I saw <strong>nothing</strong>.</td>
+          <td><div class="example-audio">
+            <button class="audio-btn" data-phrase="I saw nothing." data-accent="us">🇺🇸 US</button>
+            <button class="audio-btn" data-phrase="I saw nothing." data-accent="uk">🇬🇧 UK</button>
+          </div></td>
+        </tr>
+        <tr>
+          <td><strong>Nowhere</strong></td>
+          <td>no place</td>
+          <td>We went <strong>nowhere</strong> last weekend.</td>
+          <td><div class="example-audio">
+            <button class="audio-btn" data-phrase="We went nowhere last weekend." data-accent="us">🇺🇸 US</button>
+            <button class="audio-btn" data-phrase="We went nowhere last weekend." data-accent="uk">🇬🇧 UK</button>
+          </div></td>
+        </tr>
+        <tr>
+          <td><strong>None</strong></td>
+          <td>not one / not any</td>
+          <td><strong>None</strong> of them came.</td>
+          <td><div class="example-audio">
+            <button class="audio-btn" data-phrase="None of them came." data-accent="us">🇺🇸 US</button>
+            <button class="audio-btn" data-phrase="None of them came." data-accent="uk">🇬🇧 UK</button>
+          </div></td>
+        </tr>
+        <tr>
+          <td><strong>No</strong> + noun</td>
+          <td>zero quantity</td>
+          <td>There are <strong>no people</strong> here.</td>
+          <td><div class="example-audio">
+            <button class="audio-btn" data-phrase="There are no people here." data-accent="us">🇺🇸 US</button>
+            <button class="audio-btn" data-phrase="There are no people here." data-accent="uk">🇬🇧 UK</button>
+          </div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tip">
+    <strong>💡 Avoid double negatives:</strong> Choose <em>either</em> a negative word <em>or</em> "not" — never both.<br>
+    ✅ I saw <strong>nothing</strong>. / I <strong>didn't</strong> see <strong>anything</strong>. ❌ I didn't see nothing.
+  </div>
+
+  <div class="concept-card">
+    <div class="concept-header">
+      <span class="concept-title">7️⃣ nobody, nothing, nowhere</span>
+      <span class="concept-level">A2–B1</span>
+    </div>
+    <div class="concept-question">❓ How do we use 'nobody', 'nothing', etc.?</div>
+    <div class="exercise" id="concept7-ex">
+      <button class="option" onclick="answerConcept(this, true, 'concept7-ex')">They are negative words that replace the subject or object.</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept7-ex')">They are used with 'not' together.</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept7-ex')">They are only used in questions.</button>
+      <div class="feedback"></div>
+    </div>
+    <div class="concept-answer">✅ They substitute the subject or object and remove the need for "not".</div>
+    <div class="concept-example">
+      <strong>Examples:</strong> Nobody came to the event. / I saw nothing.
+    </div>
+    <div class="example-audio">
+      <button class="audio-btn" data-phrase="Nobody came to the event. I saw nothing." data-accent="us">🇺🇸 US</button>
+      <button class="audio-btn" data-phrase="Nobody came to the event. I saw nothing." data-accent="uk">🇬🇧 UK</button>
+    </div>
+    <div class="rq-vocab" style="margin-top:12px;padding-top:10px;border-top:1px dashed #d0d9e6;font-size:.88rem;color:var(--muted);">
+      <strong style="color:var(--primary);">📚 Key Vocabulary:</strong>
+      <span class="vocab-audio" data-phrase="nobody" data-accent="us">🔊 nobody → ninguém</span>
+      <span class="vocab-audio" data-phrase="nothing" data-accent="us">🔊 nothing → nada</span>
+      <span class="vocab-audio" data-phrase="nowhere" data-accent="us">🔊 nowhere → nenhum lugar</span>
+      <span class="vocab-audio" data-phrase="none" data-accent="us">🔊 none → nenhum</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ADVANCED ========== -->
+<section class="card" id="advanced">
+  <h2>📘 6. Advanced Negation — neither…nor · hardly · negative verbs</h2>
+  <p>Formas mais sofisticadas de negação, essenciais para B1–B2.</p>
+
+  <div class="concept-card">
+    <div class="concept-header">
+      <span class="concept-title">8️⃣ neither...nor</span>
+      <span class="concept-level">B1–B2</span>
+    </div>
+    <div class="concept-question">❓ What does 'neither...nor...' mean?</div>
+    <div class="exercise" id="concept8-ex">
+      <button class="option" onclick="answerConcept(this, true, 'concept8-ex')">It expresses two negatives together (nem...nem...).</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept8-ex')">It means 'both'.</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept8-ex')">It means 'either...or'.</button>
+      <div class="feedback"></div>
+    </div>
+    <div class="concept-answer">✅ <strong>Neither…nor</strong> = "nem…nem" — expressa dois negativos juntos.</div>
+    <div class="concept-example">
+      <strong>Example:</strong> He drinks neither tea nor coffee.
+    </div>
+    <div class="example-audio">
+      <button class="audio-btn" data-phrase="He drinks neither tea nor coffee." data-accent="us">🇺🇸 US</button>
+      <button class="audio-btn" data-phrase="He drinks neither tea nor coffee." data-accent="uk">🇬🇧 UK</button>
+    </div>
+    <div class="rq-vocab" style="margin-top:12px;padding-top:10px;border-top:1px dashed #d0d9e6;font-size:.88rem;color:var(--muted);">
+      <strong style="color:var(--primary);">📚 Key Vocabulary:</strong>
+      <span class="vocab-audio" data-phrase="neither" data-accent="us">🔊 neither → nem um nem outro</span>
+      <span class="vocab-audio" data-phrase="nor" data-accent="us">🔊 nor → nem</span>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <div class="concept-header">
+      <span class="concept-title">9️⃣ hardly / barely</span>
+      <span class="concept-level">B1–B2</span>
+    </div>
+    <div class="concept-question">❓ How do we use words like 'hardly', 'barely'?</div>
+    <div class="exercise" id="concept9-ex">
+      <button class="option" onclick="answerConcept(this, true, 'concept9-ex')">They mean 'almost not' / 'quase não'.</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept9-ex')">They mean 'very much'.</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept9-ex')">They are synonyms for 'always'.</button>
+      <div class="feedback"></div>
+    </div>
+    <div class="concept-answer">✅ <strong>Hardly / barely</strong> = "quase não".</div>
+    <div class="concept-example">
+      <strong>Examples:</strong> She hardly slept. / I barely passed.
+    </div>
+    <div class="example-audio">
+      <button class="audio-btn" data-phrase="She hardly slept. I barely passed." data-accent="us">🇺🇸 US</button>
+      <button class="audio-btn" data-phrase="She hardly slept. I barely passed." data-accent="uk">🇬🇧 UK</button>
+    </div>
+    <div class="rq-vocab" style="margin-top:12px;padding-top:10px;border-top:1px dashed #d0d9e6;font-size:.88rem;color:var(--muted);">
+      <strong style="color:var(--primary);">📚 Key Vocabulary:</strong>
+      <span class="vocab-audio" data-phrase="hardly" data-accent="us">🔊 hardly → quase não</span>
+      <span class="vocab-audio" data-phrase="barely" data-accent="us">🔊 barely → mal / quase não</span>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <div class="concept-header">
+      <span class="concept-title">🔟 Negative verbs — deny, refuse, lack</span>
+      <span class="concept-level">B1–B2</span>
+    </div>
+    <div class="concept-question">❓ Which verbs have negative meaning?</div>
+    <div class="exercise" id="concept10-ex">
+      <button class="option" onclick="answerConcept(this, true, 'concept10-ex')">Deny, refuse, lack — they express negation by themselves.</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept10-ex')">Accept, agree, want.</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept10-ex')">Only 'not' is negative.</button>
+      <div class="feedback"></div>
+    </div>
+    <div class="concept-answer">✅ <strong>Deny, refuse, lack</strong> express negative meaning even without "not".</div>
+    <div class="concept-example">
+      <strong>Examples:</strong> He denied it. / They refused the offer. / They lack resources.
+    </div>
+    <div class="example-audio">
+      <button class="audio-btn" data-phrase="He denied it. They refused the offer. They lack resources." data-accent="us">🇺🇸 US</button>
+      <button class="audio-btn" data-phrase="He denied it. They refused the offer. They lack resources." data-accent="uk">🇬🇧 UK</button>
+    </div>
+    <div class="rq-vocab" style="margin-top:12px;padding-top:10px;border-top:1px dashed #d0d9e6;font-size:.88rem;color:var(--muted);">
+      <strong style="color:var(--primary);">📚 Key Vocabulary:</strong>
+      <span class="vocab-audio" data-phrase="deny" data-accent="us">🔊 deny → negar</span>
+      <span class="vocab-audio" data-phrase="refuse" data-accent="us">🔊 refuse → recusar</span>
+      <span class="vocab-audio" data-phrase="lack" data-accent="us">🔊 lack → faltar</span>
+    </div>
+  </div>
+
+  <h3 style="margin-top:24px">🔄 Question Tags — a forma negativa mais comum na conversação</h3>
+  <p>Quando a frase principal é afirmativa, a <em>tag</em> é negativa; quando a frase principal é negativa, a <em>tag</em> é afirmativa.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Main sentence</th><th>Tag</th><th>Example</th><th>Áudio</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Affirmative</td>
+          <td>negative tag</td>
+          <td>You are Brazilian, <strong>aren't you</strong>?</td>
+          <td><div class="example-audio">
+            <button class="audio-btn" data-phrase="You are Brazilian, aren't you?" data-accent="us">🇺🇸 US</button>
+            <button class="audio-btn" data-phrase="You are Brazilian, aren't you?" data-accent="uk">🇬🇧 UK</button>
+          </div></td>
+        </tr>
+        <tr>
+          <td>Negative</td>
+          <td>affirmative tag</td>
+          <td>She doesn't like coffee, <strong>does she</strong>?</td>
+          <td><div class="example-audio">
+            <button class="audio-btn" data-phrase="She doesn't like coffee, does she?" data-accent="us">🇺🇸 US</button>
+            <button class="audio-btn" data-phrase="She doesn't like coffee, does she?" data-accent="uk">🇬🇧 UK</button>
+          </div></td>
+        </tr>
+        <tr>
+          <td>Negative</td>
+          <td>affirmative tag</td>
+          <td>They won't come, <strong>will they</strong>?</td>
+          <td><div class="example-audio">
+            <button class="audio-btn" data-phrase="They won't come, will they?" data-accent="us">🇺🇸 US</button>
+            <button class="audio-btn" data-phrase="They won't come, will they?" data-accent="uk">🇬🇧 UK</button>
+          </div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ========== VOCABULARY ========== -->
+<section class="card" id="vocab">
+  <h2>🧠 7. Vocabulary — Consolidated Glossary</h2>
+  <p>Glossário consolidado com os principais termos e palavras negativas, com áudio US/UK.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>English</th><th>Português</th><th>Áudio</th></tr></thead>
+      <tbody>
+        <tr><td>don't</td><td>não (presente)</td><td><div class="example-audio"><button class="audio-btn" data-phrase="don't" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="don't" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>doesn't</td><td>não (3ª pessoa presente)</td><td><div class="example-audio"><button class="audio-btn" data-phrase="doesn't" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="doesn't" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>didn't</td><td>não (passado)</td><td><div class="example-audio"><button class="audio-btn" data-phrase="didn't" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="didn't" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>won't</td><td>não (futuro)</td><td><div class="example-audio"><button class="audio-btn" data-phrase="won't" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="won't" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>can't / cannot</td><td>não poder</td><td><div class="example-audio"><button class="audio-btn" data-phrase="can't, cannot" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="can't, cannot" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>never</td><td>nunca</td><td><div class="example-audio"><button class="audio-btn" data-phrase="never" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="never" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>no</td><td>nenhum / sem</td><td><div class="example-audio"><button class="audio-btn" data-phrase="no" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="no" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>not</td><td>não</td><td><div class="example-audio"><button class="audio-btn" data-phrase="not" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="not" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>nobody / no one</td><td>ninguém</td><td><div class="example-audio"><button class="audio-btn" data-phrase="nobody, no one" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="nobody, no one" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>nothing</td><td>nada</td><td><div class="example-audio"><button class="audio-btn" data-phrase="nothing" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="nothing" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>nowhere</td><td>nenhum lugar</td><td><div class="example-audio"><button class="audio-btn" data-phrase="nowhere" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="nowhere" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>none</td><td>nenhum</td><td><div class="example-audio"><button class="audio-btn" data-phrase="none" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="none" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>neither…nor</td><td>nem…nem</td><td><div class="example-audio"><button class="audio-btn" data-phrase="neither nor" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="neither nor" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>hardly</td><td>quase não</td><td><div class="example-audio"><button class="audio-btn" data-phrase="hardly" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="hardly" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>barely</td><td>mal / quase não</td><td><div class="example-audio"><button class="audio-btn" data-phrase="barely" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="barely" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>deny</td><td>negar</td><td><div class="example-audio"><button class="audio-btn" data-phrase="deny" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="deny" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>refuse</td><td>recusar</td><td><div class="example-audio"><button class="audio-btn" data-phrase="refuse" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="refuse" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>lack</td><td>faltar</td><td><div class="example-audio"><button class="audio-btn" data-phrase="lack" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="lack" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ========== EXERCISES ========== -->
+<section class="card" id="exercises">
+  <h2>✏️ 8. Exercises</h2>
+
+  <div class="exercise">
+    <h3>Exercise 1 — Present Negation</h3>
+    <p>They ______ agree.</p>
+    <select id="ex1">
+      <option value="">Choose an answer</option>
+      <option>do not</option>
+      <option>does not</option>
+      <option>not</option>
+    </select>
+    <button class="secondary" onclick="checkEx1()">Check answer</button>
+    <div id="ex1fb" class="feedback"></div>
+  </div>
+
+  <div class="exercise">
+    <h3>Exercise 2 — Present Negation (3rd person)</h3>
+    <p>She ______ like coffee.</p>
+    <select id="ex2">
+      <option value="">Choose an answer</option>
+      <option>don't</option>
+      <option>doesn't</option>
+      <option>didn't</option>
+    </select>
+    <button class="secondary" onclick="checkEx2()">Check answer</button>
+    <div id="ex2fb" class="feedback"></div>
+  </div>
+
+  <div class="exercise">
+    <h3>Exercise 3 — Past Negation</h3>
+    <p>He ______ go to work yesterday.</p>
+    <select id="ex3">
+      <option value="">Choose an answer</option>
+      <option>doesn't</option>
+      <option>didn't</option>
+      <option>won't</option>
+    </select>
+    <button class="secondary" onclick="checkEx3()">Check answer</button>
+    <div id="ex3fb" class="feedback"></div>
+  </div>
+
+  <div class="exercise">
+    <h3>Exercise 4 — Future Negation</h3>
+    <p>They ______ attend the meeting.</p>
+    <select id="ex4">
+      <option value="">Choose an answer</option>
+      <option>don't</option>
+      <option>didn't</option>
+      <option>won't</option>
+    </select>
+    <button class="secondary" onclick="checkEx4()">Check answer</button>
+    <div id="ex4fb" class="feedback"></div>
+  </div>
+
+  <div class="exercise">
+    <h3>Exercise 5 — No × Not</h3>
+    <p>I am ______ ready.</p>
+    <select id="ex5">
+      <option value="">Choose an answer</option>
+      <option>no</option>
+      <option>not</option>
+      <option>none</option>
+    </select>
+    <button class="secondary" onclick="checkEx5()">Check answer</button>
+    <div id="ex5fb" class="feedback"></div>
+  </div>
+
+  <div class="exercise">
+    <h3>Exercise 6 — Double Negative</h3>
+    <p>Which sentence is correct?</p>
+    <select id="ex6">
+      <option value="">Choose an answer</option>
+      <option>I didn't see nothing.</option>
+      <option>I saw nothing.</option>
+      <option>I didn't saw nothing.</option>
+    </select>
+    <button class="secondary" onclick="checkEx6()">Check answer</button>
+    <div id="ex6fb" class="feedback"></div>
+  </div>
+
+  <div class="exercise">
+    <h3>Exercise 7 — neither…nor</h3>
+    <p>He drinks ______ tea ______ coffee.</p>
+    <select id="ex7">
+      <option value="">Choose an answer</option>
+      <option>neither... nor</option>
+      <option>either... or</option>
+      <option>both... and</option>
+    </select>
+    <button class="secondary" onclick="checkEx7()">Check answer</button>
+    <div id="ex7fb" class="feedback"></div>
+  </div>
+
+  <div class="exercise">
+    <h3>Exercise 8 — Translation</h3>
+    <p>"Eu nunca visitei o Japão."</p>
+    <input id="ex8" type="text" placeholder="Type the English sentence">
+    <button class="secondary" onclick="checkEx8()">Check answer</button>
+    <div id="ex8fb" class="feedback"></div>
+  </div>
+</section>
+
+<!-- ========== LISTENING ========== -->
+<section class="card" id="listening">
+  <h2>🎧 9. Listening Practice — A Busy Week</h2>
+  <p>Ouça o texto e responda às perguntas. Ele usa as principais formas negativas da aula em contexto.</p>
+
+  <div class="audio-box">
+    <button onclick="speakListening()">🔊 Play Listening</button>
+    <button class="light" onclick="toggleTranscript()">📄 Show / Hide Transcript</button>
+    <div id="transcript" class="example">
+      <div class="en">
+        Hi, my name is Bruno. I don't usually have a lot of free time during
+        the week. I work in an office, but I don't like waking up early.
+        My sister doesn't drive, so she takes the bus. Last weekend we didn't
+        go anywhere — we stayed home. We didn't see anyone, and we didn't
+        do anything special. Next week, I won't work on Friday because it's
+        a holiday. I can't cook very well, so we'll probably order food.
+        I have never been to Japan, but I would love to go one day.
+        Nobody in my family speaks Japanese. Neither my brother nor I
+        can speak it. I hardly ever watch TV, but I barely missed the news
+        last night. Life isn't always easy, but we don't complain.
+      </div>
+      <div class="pt">
+        Olá, meu nome é Bruno. Eu normalmente não tenho muito tempo livre durante
+        a semana. Trabalho num escritório, mas não gosto de acordar cedo.
+        Minha irmã não dirige, então ela pega o ônibus. No fim de semana passado
+        não fomos a lugar nenhum — ficamos em casa. Não vimos ninguém e não
+        fizemos nada especial. Na próxima semana, não trabalharei na sexta porque é
+        feriado. Não sei cozinhar muito bem, então provavelmente pediremos comida.
+        Eu nunca fui ao Japão, mas adoraria ir um dia.
+        Ninguém na minha família fala japonês. Nem meu irmão nem eu
+        sabemos falar. Eu quase nunca assisto TV, mas quase perdi o jornal
+        ontem à noite. A vida nem sempre é fácil, mas não reclamamos.
+      </div>
+    </div>
+  </div>
+
+  <div class="exercise">
+    <h3>Listening Questions</h3>
+    <p><strong>1.</strong> Does Bruno usually have a lot of free time?</p>
+    <select id="l1">
+      <option value="">Choose</option><option>Yes, he does.</option><option>No, he doesn't.</option><option>Sometimes.</option>
+    </select>
+
+    <p><strong>2.</strong> Does Bruno like waking up early?</p>
+    <select id="l2">
+      <option value="">Choose</option><option>Yes, he does.</option><option>No, he doesn't.</option><option>He doesn't say.</option>
+    </select>
+
+    <p><strong>3.</strong> Why does his sister take the bus?</p>
+    <select id="l3">
+      <option value="">Choose</option><option>Because she likes buses.</option><option>Because she doesn't drive.</option><option>Because it's faster.</option>
+    </select>
+
+    <p><strong>4.</strong> Did they go anywhere last weekend?</p>
+    <select id="l4">
+      <option value="">Choose</option><option>Yes, they went to the park.</option><option>No, they didn't go anywhere.</option><option>They went to the movies.</option>
+    </select>
+
+    <p><strong>5.</strong> Did they see anyone last weekend?</p>
+    <select id="l5">
+      <option value="">Choose</option><option>Yes, they saw a friend.</option><option>No, they didn't see anyone.</option><option>They saw their family.</option>
+    </select>
+
+    <p><strong>6.</strong> Will Bruno work next Friday?</p>
+    <select id="l6">
+      <option value="">Choose</option><option>Yes, he will.</option><option>No, he won't — it's a holiday.</option><option>He doesn't know.</option>
+    </select>
+
+    <p><strong>7.</strong> Can Bruno cook very well?</p>
+    <select id="l7">
+      <option value="">Choose</option><option>Yes, he can.</option><option>No, he can't.</option><option>He can only cook pasta.</option>
+    </select>
+
+    <p><strong>8.</strong> Has Bruno ever been to Japan?</p>
+    <select id="l8">
+      <option value="">Choose</option><option>Yes, he has.</option><option>No, he has never been there.</option><option>He went last year.</option>
+    </select>
+
+    <p><strong>9.</strong> Who speaks Japanese in his family?</p>
+    <select id="l9">
+      <option value="">Choose</option><option>His brother.</option><option>Nobody in his family speaks Japanese.</option><option>His sister.</option>
+    </select>
+
+    <p><strong>10.</strong> Does he watch TV a lot?</p>
+    <select id="l10">
+      <option value="">Choose</option><option>Yes, every day.</option><option>No, he hardly ever watches TV.</option><option>Only on weekends.</option>
+    </select>
+
+    <button class="secondary" onclick="checkListening()">Check Listening</button>
+    <div id="lfb" class="feedback"></div>
+  </div>
+</section>
+
+<!-- ========== QUIZ ========== -->
+<section class="card" id="quiz">
+  <h2>🎮 10. Interactive Quiz</h2>
+  <p>10 questões sobre formas negativas. O feedback aparece imediatamente. <em>As questões são embaralhadas a cada tentativa.</em></p>
+
+  <div id="quizContainer"></div>
+
+  <div class="score">
+    <div>YOUR SCORE</div>
+    <strong id="score">0 / 10</strong>
+    <p id="scoreMessage">Complete o quiz para ver seu resultado.</p>
+    <button class="light" onclick="restartQuiz()">🔄 Restart Quiz</button>
+  </div>
+</section>
+
+<section class="card">
+  <h2>🏁 Lesson Challenge</h2>
+  <p>Sem consultar o conteúdo, transforme as frases em negativas em inglês:</p>
+  <div class="example">
+    <strong>1.</strong> They agree. → ______<br>
+    <strong>2.</strong> She drives. → ______<br>
+    <strong>3.</strong> He went to work yesterday. → ______<br>
+    <strong>4.</strong> They will attend the meeting. → ______<br>
+    <strong>5.</strong> I saw something. → ______ (use "nothing")<br>
+    <strong>6.</strong> Some people came. → ______ (use "no people")
+  </div>
+  <p class="small">Objetivo: produzir 6 frases negativas corretas em 30–45 segundos, usando don't, doesn't, didn't, won't e palavras negativas.</p>
+</section>
+
+</main>
+
+<footer>
+  Inglês Profissional • Preparação para Exames • Cambridge • IELTS • TOEFL • Duolingo English Test (DET)<br>
+  <span class="copyright">© English VClass • Edson D'Aguiar</span>
+  • WhatsApp ➡️ <a href="https://wa.me/5541991725009" target="_blank" rel="noopener">Contato</a>
+</footer>
+
+<script>
+/* ---------- AUDIO ---------- */
+document.addEventListener('click', function(e) {
+  const btn = e.target.closest('.audio-btn, .vocab-audio');
+  if (!btn) return;
+  e.stopPropagation();
+  const phrase = btn.dataset.phrase;
+  const accent = btn.dataset.accent || 'us';
+  if (!phrase) return;
+
+  if (window.speechSynthesis) window.speechSynthesis.cancel();
+
+  const utterance = new SpeechSynthesisUtterance(phrase);
+  const langMap = { us: 'en-US', uk: 'en-GB' };
+  utterance.lang = langMap[accent] || 'en-US';
+  utterance.rate = 0.85;
+  utterance.pitch = 1.0;
+
+  const voices = window.speechSynthesis.getVoices();
+  if (voices.length > 0) {
+    const found = voices.find(v => v.lang.startsWith(utterance.lang)) ||
+                  voices.find(v => v.lang.startsWith('en'));
+    if (found) utterance.voice = found;
+  }
+
+  btn.classList.add('playing');
+  utterance.onend = () => btn.classList.remove('playing');
+  utterance.onerror = () => btn.classList.remove('playing');
+  window.speechSynthesis.speak(utterance);
+});
+
+/* ---------- FEEDBACK HELPER ---------- */
+function setFeedback(el, correct, text){
+  el.className='feedback '+(correct?'correct':'wrong');
+  el.textContent=(correct?'🟢 ':'🔴 ')+text;
+}
+
+/* ---------- CONCEPT CARDS ---------- */
+function answerConcept(btn, isCorrect, cardId){
+  const card = document.getElementById(cardId);
+  const options = card.querySelectorAll('.option');
+  const fb = card.querySelector('.feedback');
+  if ([...options].some(o => o.disabled)) return;
+
+  options.forEach(o => {
+    o.disabled = true;
+    if (o === btn) o.classList.add(isCorrect ? 'correct' : 'wrong');
+  });
+  if (!isCorrect) {
+    options.forEach(o => {
+      const handler = o.getAttribute('onclick') || '';
+      if (handler.includes(', true,')) o.classList.add('correct');
+    });
+  }
+  if (isCorrect) {
+    setFeedback(fb, true, 'Correct!');
+  } else {
+    setFeedback(fb, false, 'Not quite — the highlighted option is the correct answer.');
+  }
+}
+
+/* ---------- PROGRESS ---------- */
+const SECTIONS = ['objetivos','present','past','future','no-not','negative-words','advanced','vocab','exercises','listening','quiz'];
+const sectionState = {};
+SECTIONS.forEach(s => sectionState[s] = false);
+
+function markSectionDone(id){
+  if (sectionState[id]) return;
+  sectionState[id] = true;
+  const link = document.querySelector('nav a[data-section="'+id+'"]');
+  if (link) link.classList.add('done');
+  updateProgress();
+}
+
+function updateProgress(){
+  const done = SECTIONS.filter(s => sectionState[s]).length;
+  const pct = Math.round((done / SECTIONS.length) * 100);
+  document.getElementById('globalProgress').style.width = pct + '%';
+  document.getElementById('progressLabel').textContent = pct;
+}
+
+document.querySelectorAll('#exercises .exercise button').forEach(btn => {
+  btn.addEventListener('click', () => markSectionDone('exercises'));
+});
+document.querySelectorAll('#listening button').forEach(btn => {
+  btn.addEventListener('click', () => markSectionDone('listening'));
+});
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      if (['objetivos','present','past','future','no-not','negative-words','advanced','vocab'].includes(id)) markSectionDone(id);
+    }
+  });
+}, { threshold: 0.2 });
+['objetivos','present','past','future','no-not','negative-words','advanced','vocab'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) observer.observe(el);
+});
+
+/* ---------- EXERCISES ---------- */
+function checkEx1(){
+  const v=document.getElementById('ex1').value;
+  setFeedback(document.getElementById('ex1fb'), v==='do not', v==='do not' ? 'Correct! "They do not agree."' : 'Try again — "They" takes "do not".');
+  markSectionDone('exercises');
+}
+function checkEx2(){
+  const v=document.getElementById('ex2').value;
+  setFeedback(document.getElementById('ex2fb'), v==="doesn't", v==="doesn't" ? 'Correct! "She doesn\'t like coffee."' : 'Try again — "She" takes "doesn\'t".');
+  markSectionDone('exercises');
+}
+function checkEx3(){
+  const v=document.getElementById('ex3').value;
+  setFeedback(document.getElementById('ex3fb'), v==="didn't", v==="didn't" ? 'Correct! "He didn\'t go to work yesterday."' : 'Try again — past negation uses "didn\'t".');
+  markSectionDone('exercises');
+}
+function checkEx4(){
+  const v=document.getElementById('ex4').value;
+  setFeedback(document.getElementById('ex4fb'), v==="won't", v==="won't" ? 'Correct! "They won\'t attend the meeting."' : 'Try again — future negation uses "won\'t".');
+  markSectionDone('exercises');
+}
+function checkEx5(){
+  const v=document.getElementById('ex5').value;
+  setFeedback(document.getElementById('ex5fb'), v==='not', v==='not' ? 'Correct! "I am not ready."' : 'Try again — "not" is used with the verb.');
+  markSectionDone('exercises');
+}
+function checkEx6(){
+  const v=document.getElementById('ex6').value;
+  setFeedback(document.getElementById('ex6fb'), v==='I saw nothing.', v==='I saw nothing.' ? 'Correct! Avoid double negatives.' : 'Try again — choose the sentence with no double negative.');
+  markSectionDone('exercises');
+}
+function checkEx7(){
+  const v=document.getElementById('ex7').value;
+  setFeedback(document.getElementById('ex7fb'), v==='neither... nor', v==='neither... nor' ? 'Correct! "He drinks neither tea nor coffee."' : 'Try again — "nem...nem" = "neither...nor".');
+  markSectionDone('exercises');
+}
+function checkEx8(){
+  const v=document.getElementById('ex8').value.trim().toLowerCase().replace(/[.!?]+$/,'').replace(/\s+/g,' ');
+  const ok=v==='i have never visited japan';
+  setFeedback(document.getElementById('ex8fb'), ok, ok ? 'Correct! "I have never visited Japan."' : 'Try again — use "I have never visited Japan."');
+  markSectionDone('exercises');
+}
+
+/* ---------- LISTENING ---------- */
+function speakListening(){
+  if(!('speechSynthesis' in window)){
+    alert('Seu navegador não oferece reprodução de voz neste momento.');
+    return;
+  }
+  const text="Hi, my name is Bruno. I don't usually have a lot of free time during the week. I work in an office, but I don't like waking up early. My sister doesn't drive, so she takes the bus. Last weekend we didn't go anywhere — we stayed home. We didn't see anyone, and we didn't do anything special. Next week, I won't work on Friday because it's a holiday. I can't cook very well, so we'll probably order food. I have never been to Japan, but I would love to go one day. Nobody in my family speaks Japanese. Neither my brother nor I can speak it. I hardly ever watch TV, but I barely missed the news last night. Life isn't always easy, but we don't complain.";
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang='en-US'; u.rate=.88;
+  speechSynthesis.cancel(); speechSynthesis.speak(u);
+  markSectionDone('listening');
+}
+function toggleTranscript(){
+  const t=document.getElementById('transcript');
+  t.style.display=t.style.display==='block'?'none':'block';
+  markSectionDone('listening');
+}
+function checkListening(){
+  let score=0;
+  if(document.getElementById('l1').value==="No, he doesn't.") score++;
+  if(document.getElementById('l2').value==="No, he doesn't.") score++;
+  if(document.getElementById('l3').value==="Because she doesn't drive.") score++;
+  if(document.getElementById('l4').value==="No, they didn't go anywhere.") score++;
+  if(document.getElementById('l5').value==="No, they didn't see anyone.") score++;
+  if(document.getElementById('l6').value==="No, he won't — it's a holiday.") score++;
+  if(document.getElementById('l7').value==="No, he can't.") score++;
+  if(document.getElementById('l8').value==="No, he has never been there.") score++;
+  if(document.getElementById('l9').value==="Nobody in his family speaks Japanese.") score++;
+  if(document.getElementById('l10').value==="No, he hardly ever watches TV.") score++;
+  const ok=score===10;
+  const msg=ok?'Excellent! 10/10 correct.':'You got '+score+'/10. Review the transcript and try again.';
+  setFeedback(document.getElementById('lfb'), ok, msg);
+  markSectionDone('listening');
+}
+
+/* ---------- QUIZ (RANDOMIZED) ---------- */
+const baseQuestions=[
+ {q:'How do we negate actions in the present (I/you/we/they)?',a:['do not (don\'t)','does not (doesn\'t)','did not (didn\'t)','will not (won\'t)'],c:0,e:'I/you/we/they → don\'t + base verb.'},
+ {q:'How do we negate actions in the present (he/she/it)?',a:['do not (don\'t)','does not (doesn\'t)','did not (didn\'t)','will not (won\'t)'],c:1,e:'he/she/it → doesn\'t + base verb.'},
+ {q:'How do we negate actions in the past?',a:['do not','does not','did not (didn\'t)','will not'],c:2,e:'Past → didn\'t + base verb.'},
+ {q:'How do we negate actions in the future?',a:['do not','did not','will not (won\'t)','cannot'],c:2,e:'Future → won\'t + base verb.'},
+ {q:'How do we express inability?',a:['don\'t can','cannot (can\'t)','not can','won\'t can'],c:1,e:'cannot / can\'t.'},
+ {q:'"She is ___ ready."',a:['no','not','none','never'],c:1,e:'"not" is used with the verb.'},
+ {q:'"There are ___ people here."',a:['no','not','none','never'],c:0,e:'"no" before a noun.'},
+ {q:'What does "never" mean?',a:['Sempre','Nunca','Às vezes','Frequentemente'],c:1,e:'never = nunca.'},
+ {q:'Which sentence avoids a double negative?',a:['I didn\'t see nothing.','I didn\'t saw nothing.','I saw nothing.','I didn\'t saw nothing.'],c:2,e:'I saw nothing — single negative.'},
+ {q:'"He drinks ___ tea ___ coffee."',a:['neither…nor','either…or','both…and','no…no'],c:0,e:'neither…nor = nem…nem.'}
+];
+
+let questions = [];
+let quizScore=0;
+let answered=0;
+
+function shuffle(arr){
+  const a=[...arr];
+  for(let i=a.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [a[i],a[j]]=[a[j],a[i]];
+  }
+  return a;
+}
+
+function buildQuestions(){
+  questions = shuffle(baseQuestions).map(q => {
+    const pairs = q.a.map((text, idx) => ({text, correct: idx === q.c}));
+    const shuffledPairs = shuffle(pairs);
+    const newOptions = shuffledPairs.map(p => p.text);
+    const newCorrect = shuffledPairs.findIndex(p => p.correct);
+    return { q: q.q, a: newOptions, c: newCorrect, e: q.e };
+  });
+}
+
+function renderQuiz(){
+  buildQuestions();
+  const c=document.getElementById('quizContainer');
+  c.innerHTML='';
+  questions.forEach((item,i)=>{
+    const box=document.createElement('div');
+    box.className='exercise';
+    box.innerHTML='<h3>Question '+(i+1)+'</h3><p><strong>'+item.q+'</strong></p>';
+    item.a.forEach((ans,j)=>{
+      const b=document.createElement('button');
+      b.className='option';
+      b.textContent=String.fromCharCode(65+j)+') '+ans;
+      b.onclick=()=>answerQuiz(i,j,box);
+      box.appendChild(b);
+    });
+    const f=document.createElement('div');
+    f.className='feedback';
+    f.id='qfb'+i;
+    box.appendChild(f);
+    c.appendChild(box);
+  });
+  updateScore();
+}
+
+function answerQuiz(i,j,box){
+  const buttons=box.querySelectorAll('.option');
+  if([...buttons].some(b=>b.disabled)) return;
+  buttons.forEach(b=>b.disabled=true);
+  const correct=j===questions[i].c;
+  buttons[j].classList.add(correct?'correct':'wrong');
+  if(!correct) buttons[questions[i].c].classList.add('correct');
+  if(correct) quizScore++;
+  answered++;
+  const fb=document.getElementById('qfb'+i);
+  fb.className='feedback '+(correct?'correct':'wrong');
+  fb.textContent=(correct?'🟢 Correct! ':'🔴 Not quite. ')+questions[i].e;
+  updateScore();
+  if(answered===10) markSectionDone('quiz');
+}
+
+function updateScore(){
+  document.getElementById('score').textContent=quizScore+' / 10';
+  const msg=document.getElementById('scoreMessage');
+  if(answered===0) msg.textContent='Complete o quiz para ver seu resultado.';
+  else if(answered<10) msg.textContent='Keep going! '+answered+' of 10 answered.';
+  else if(quizScore===10) msg.textContent='🏆 Excellent! Perfect score!';
+  else if(quizScore>=8) msg.textContent='👏 Great job! Review the questions you missed.';
+  else if(quizScore>=6) msg.textContent='👍 Good start! Review the lesson and try again.';
+  else msg.textContent='📚 Keep practicing. Review the lesson and restart the quiz.';
+}
+
+function restartQuiz(){
+  quizScore=0; answered=0; renderQuiz();
+  document.getElementById('quiz').scrollIntoView({behavior:'smooth'});
+}
+
+renderQuiz();
+updateProgress();
+</script>
+
+</body>
+</html>
